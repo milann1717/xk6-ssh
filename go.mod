@@ -1,8 +1,6 @@
 module github.com/milann1717/xk6-ssh
 
-replace github.com/grafana/xk6-ssh=> github.com/milann1717/xk6-ssh
-
-go 1.20
+go 1.24.1
 
 require (
 	github.com/spf13/afero v1.9.5
