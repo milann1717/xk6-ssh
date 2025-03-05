@@ -1,6 +1,6 @@
 module github.com/milann1717/xk6-ssh
 
-replace github.com/grafana/xk6-ssh v0.1.1=> github.com/milann1717/xk6-ssh
+replace github.com/grafana/xk6-ssh=> github.com/milann1717/xk6-ssh
 
 go 1.20
 
