@@ -1,4 +1,4 @@
-module github.com/grafana/xk6-ssh
+module github.com/milann1717/xk6-ssh
 
 go 1.20
 
