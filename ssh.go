@@ -29,6 +29,9 @@ type ConnectionOptions struct {
 	Port     int
 	Username string
 	Password string
+	Confighost string
+	Configport int
+	Configproxycommand string
 }
 
 func (k6ssh *K6SSH) rsaKeyAuthMethod(options ConnectionOptions) (ssh.AuthMethod, error) {
@@ -65,7 +68,7 @@ func (k6ssh *K6SSH) Connect(options ConnectionOptions) error {
 	}
 
 	k6ssh.Config = &ssh.ClientConfig{
-		Config: ssh.Config{},
+		Config: ssh.Config{Host: options.Confighost, Port: options.Configport, ProxyCommand: options.Configproxycommand },
 		User:   options.Username,
 		Auth:   []ssh.AuthMethod{authMethod},
 		// #nosec G106
